@@ -1,0 +1,18 @@
+/* dl {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+dt {
+  position: relative;
+}
+dt:nth-child(1):before {
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: red;
+  z-index: -1;
+} */
