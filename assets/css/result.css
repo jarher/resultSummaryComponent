@@ -1,0 +1,87 @@
+.result-container {
+  background: linear-gradient(
+    to bottom,
+    var(--Light-slate-blue),
+    var(--Light-royal-blue)
+  );
+  border-radius: 0 0 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem 1.2rem 2rem;
+  gap: 1.2rem;
+}
+.result-title {
+  color: var(--Light-lavender);
+  text-shadow: 0 0 2px var(--Dark-gray-blue);
+  font-weight: 500;
+}
+.svg-container {
+  width: 7.9rem;
+  height: 7.9rem;
+  position: relative;
+}
+svg {
+  transform: rotate(180deg);
+}
+.circle {
+  fill: url(#MyGradient);
+}
+.result-number,
+.total {
+  position: absolute;
+}
+.result-number {
+  color: var(--White);
+  font-size: 3.2rem;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  top: 0;
+  margin: auto;
+  height: fit-content;
+  width: fit-content;
+  font-family: "HankenGrotesk-Bold";
+}
+.total {
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  text-align: center;
+  color: var(--Light-slate-blue);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-shadow: 0 0 2px var(--Dark-gray-blue);
+}
+.result-message {
+  color: var(--Light-lavender);
+  text-align: center;
+  font-size: 0.9rem;
+  width: 85%;
+  margin: 0;
+}
+.result-message span:nth-child(1) {
+  color: var(--Pale-blue);
+  font-size: 1.3rem;
+  display: block;
+}
+.result-message span:nth-child(2) {
+  line-height: 1.2rem;
+  margin-top: 0.6rem;
+  display: block;
+  text-shadow: 0 0 2px var(--Dark-gray-blue);
+}
+@media (min-width: 768px) {
+  .result-container {
+    border-radius: 1.3rem;
+  }
+  .result-message span:nth-child(2) {
+    font-size: 0.85rem;
+  }
+}
+@media (min-width: 1024px) {
+  .result-message span:nth-child(2) {
+    font-size: 0.68rem;
+    line-height: 1rem;
+  }
+}
