@@ -9,7 +9,7 @@ function asignClass(category) {
   if (category === "Visual") return "visual-dt";
 }
 
-function template({ category, score, icon }) {
+function template({ category, score }) {
   return `<dt class="${asignClass(category)}">${category}</dt>
         <dd><b>${score}</b> / 100</dd>`;
 }
