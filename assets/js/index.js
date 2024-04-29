@@ -1,5 +1,5 @@
 async function getData() {
-  const res = await fetch("./data.json");
+  const res = await fetch("https://raw.githubusercontent.com/jarher/resultSummaryComponent/main/data.json");
   return res.json();
 }
 function asignClass(category) {
