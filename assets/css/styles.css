@@ -46,7 +46,7 @@ body {
 }
 @media (min-width: 1024px) {
   main {
-    width: 51%;
+    width: 29rem;
     border-radius: 1.3rem;
   }
 }

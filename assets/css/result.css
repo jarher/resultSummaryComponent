@@ -46,7 +46,7 @@ svg {
 .total {
   left: 0;
   right: 0;
-  bottom: 1rem;
+  bottom: 1.3rem;
   text-align: center;
   color: var(--Light-slate-blue);
   font-size: 0.9rem;
@@ -80,8 +80,27 @@ svg {
   }
 }
 @media (min-width: 1024px) {
+  .result-container {
+    padding: 1.4rem;
+  }
+  .result-title {
+    font-size: 0.95rem;
+  }
+  .result-number {
+    font-size: 2.7rem;
+  }
+  .result-message span:nth-child(1) {
+    font-size: 1.25rem;
+  }
   .result-message span:nth-child(2) {
     font-size: 0.68rem;
-    line-height: 1rem;
+    line-height: 0.9rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+  }
+  .total {
+    bottom: 1.6rem;
+    font-size: 0.8rem;
   }
 }

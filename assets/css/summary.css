@@ -34,6 +34,7 @@ dd {
 }
 dd b {
   color: var(--Dark-gray-blue);
+  margin-right: 0.2rem;
 }
 dt::before,
 dt + dd::before {
@@ -52,19 +53,20 @@ dt {
 }
 .reaction-dt::before,
 .reaction-dt + dd::before {
-  background-color: hsla(0, 100%, 67%, 0.085);
+  background-color: hsla(0, 100%, 67%, 0.075);
 }
+
 .memory-dt::before,
 .memory-dt + dd::before {
-  background-color: hsla(39, 100%, 56%, 0.085);
+  background-color: hsla(39, 100%, 56%, 0.075);
 }
 .verbal-dt::before,
 .verbal-dt + dd::before {
-  background-color: hsla(166, 100%, 37%, 0.085);
+  background-color: hsla(166, 100%, 37%, 0.075);
 }
 .visual-dt::before,
 .visual-dt + dd::before {
-  background-color: hsla(234, 85%, 45%, 0.085);
+  background-color: hsla(234, 85%, 45%, 0.075);
 }
 .reaction-dt {
   background-image: url("../images/icon-reaction.svg");
@@ -135,6 +137,6 @@ button:focus {
   button {
     font-size: 0.7125rem;
     font-weight: 500;
-    margin-top: 2rem;
+    margin-top: 1.6rem;
   }
 }
