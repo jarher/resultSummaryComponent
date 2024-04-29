@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/results-summary-component-html-css-javascript--Lwc2-aidg]
 - Live Site URL: [https://jarher.github.io/resultSummaryComponent/]
 
 ## My process
