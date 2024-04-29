@@ -1,18 +1,211 @@
-/* dl {
+@font-face {
+  font-family: "HankenGrotesk-Medium";
+  src: url("../fonts/static/HankenGrotesk-Medium.ttf");
+}
+@font-face {
+  font-family: "HankenGrotesk-Bold";
+  src: url("../fonts/static/HankenGrotesk-Bold.ttf");
+}
+@font-face {
+  font-family: "HankenGrotesk-ExtraBold";
+  src: url("../fonts/static/HankenGrotesk-ExtraBold.ttf");
+}
+:root {
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+  /* Gradients */
+  --Light-slate-blue: hsl(252, 100%, 67%);
+  --Light-royal-blue: hsl(241, 81%, 54%);
+  /* circle  */
+  --Violet-blue: hsla(256, 72%, 46%, 1);
+  --Persian-blue: hsla(241, 72%, 46%, 0);
+  --default-size: 18px;
+  /* neutral */
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: var(--default-size);
+  font-family: "HankenGrotesk-Medium";
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.result-container {
+  background: linear-gradient(
+    to bottom,
+    var(--Light-slate-blue),
+    var(--Light-royal-blue)
+  );
+  border-radius: 0 0 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem 1.2rem 2rem;
+  gap: 1.2rem;
+}
+.result-title {
+  color: var(--Light-lavender);
+  text-shadow: 0 0 2px var(--Dark-gray-blue);
+  font-weight: 500;
+}
+.svg-container {
+  width: 8.3rem;
+  height: 8.3rem;
+  position: relative;
+}
+svg {
+  transform: rotate(180deg);
+}
+.circle {
+  fill: url(#MyGradient);
+}
+.result-number,
+.total {
+  position: absolute;
+}
+.result-number {
+  color: var(--White);
+  font-size: 3.2rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  height: fit-content;
+  width: fit-content;
+  font-family: "HankenGrotesk-Bold";
+}
+.total {
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  text-align: center;
+  color: var(--Light-slate-blue);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-shadow: 0 0 2px var(--Dark-gray-blue);
+}
+.result-message {
+  color: var(--Light-lavender);
+  text-align: center;
+  font-size: 0.9rem;
+  width: 85%;
+  margin: 0;
+}
+.result-message span:nth-child(1) {
+  color: var(--Pale-blue);
+  font-size: 1.3rem;
+  display: block;
+}
+.result-message span:nth-child(2) {
+  line-height: 1.2rem;
+  margin-top: 0.6rem;
+  display: block;
+  text-shadow: 0 0 2px var(--Dark-gray-blue);
+}
+.summary-content {
+  padding: 1.6rem;
+}
+h1 {
+  color: var(--Dark-gray-blue);
+  font-size: 1rem;
+  margin: 0;
+}
+dl {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(2, 1fr);
+  font-size: 0.9rem;
+  gap: 0.83rem 0;
+  margin-bottom: 0;
+}
+dt,
+dd {
+  position: relative;
+  padding: 1rem;
+  overflow: hidden;
 }
 dt {
-  position: relative;
+  border-radius: 0.5rem 0 0 0.5rem;
+  padding-left: 2.5rem;
+  font-weight: 500;
 }
-dt:nth-child(1):before {
+dd {
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: hsla(224, 30%, 27%, 0.5);
+  font-weight: 700;
+  margin-left: 0;
+  text-align: right;
+}
+dd b {
+  color: var(--Dark-gray-blue);
+}
+dt::before,
+dt + dd::before {
   content: "";
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   position: absolute;
-  background-color: red;
   z-index: -1;
-} */
+}
+.reaction-dt::before,
+.reaction-dt + dd::before {
+  background-color: hsla(0, 100%, 67%, 0.085);
+}
+.memory-dt::before,
+.memory-dt + dd::before {
+  background-color: hsla(39, 100%, 56%, 0.085);
+}
+.verbal-dt::before,
+.verbal-dt + dd::before {
+  background-color: hsla(166, 100%, 37%, 0.085);
+}
+.visual-dt::before,
+.visual-dt + dd::before {
+  background-color: hsla(234, 85%, 45%, 0.085);
+}
+.reaction-dt {
+  background: url("../images/icon-reaction.svg") no-repeat 15px / 1.1rem;
+  color: var(--Light-red);
+}
+.memory-dt {
+  background: url("../images/icon-memory.svg") no-repeat 15px / 1.1rem;
+  color: var(--Orangey-yellow);
+}
+.verbal-dt {
+  background: url("../images/icon-verbal.svg") no-repeat 15px / 1.1rem;
+  color: var(--Green-teal);
+}
+.visual-dt {
+  background: url("../images/icon-visual.svg") no-repeat 15px / 1.1rem;
+  color: var(--Cobalt-blue);
+}
+
+button {
+  background-color: var(--Dark-gray-blue);
+  color: var(--Pale-blue);
+  width: 100%;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  font-size: 1rem;
+  margin-top: 1.3rem;
+}
+button,
+button:hover,
+button:focus {
+  border: none;
+  outline: none;
+}
