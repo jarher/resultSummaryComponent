@@ -95,12 +95,14 @@ button {
   font-size: 1rem;
   margin-top: 1.3rem;
   letter-spacing: 0.05rem;
+  transition: all 0.2s ease-in-out;
 }
 button,
 button:hover,
 button:focus {
   border: none;
   outline: none;
+  background-color: var(--Cobalt-blue);
 }
 @media (min-width: 768px) {
   dt,
